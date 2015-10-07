@@ -81,6 +81,6 @@ Diferenciais:
 * MySQL
 
 ### Instalação
-* Colocar a pasta "question4" no servidor
+* Colocar a pasta "questao-4" no servidor
 * Importar o arquivo "questao-4/dbase/desafio_bdr.sql" no PhpMyAdmin ou diretamente no console mysql
 * Reconfigurar os dados de acesso a banco no arquivo "questao-4/app/Config/database.php" adequando "host", "username" e "password"
