@@ -30,5 +30,17 @@ CREATE TABLE `users` (
 
 insert  into `users`(`id`,`user_fullname`) values (1,'Prime'),(6,'Summas Than');
 
+/*Table structure for table `api_cake` */
+
+DROP TABLE IF EXISTS `api_cake`;
+
+CREATE TABLE `api_cake`  (
+  `id` int(0) NOT NULL AUTO_INCREMENT,
+  `titulo` varchar(255) NULL,
+  `descricao` text NULL,
+  `prioridade` int(11) NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=latin1 CHECKSUM=1 DELAY_KEY_WRITE=1 ROW_FORMAT=DYNAMIC;
+
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
 /*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;

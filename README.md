@@ -58,7 +58,7 @@ class MyUserClass {
 
 ### Solução: 
 * Nessa class MyUserClass, foi alterada conforme a analise do arquivo, onde foi criada algumas CONSTANTS para conexão com o banco de dados.
-* Onde foi usado o objeto PDO da versão do php5.6 para conexao com o banco.
+* Onde foi usado o objeto PDO da versão do php5.3 para conexao com o banco.
 
 ### Instalação
 * Fazer a importação do arquivo sql-sys_bdr.sql onde consta uma tabela users que tem os registros do usuarios para ser listados.
@@ -86,18 +86,32 @@ Diferenciais:
 * Interface responsiva (desktop e mobile); (Implementado)
 
 ### Solução: 
-- Rest API que suporta operações de List, View, Add, Update e Delete
-- Interface para gerênciamento das tarefas
-- Interface para teste das requisições JSON na Rest API
-- Adequada às regras da PSR-2
-- Desenvolvido em CakePHP 2.6, respeitando o requisito da versão PHP 5.3.
+* Fazer a importação do arquivo sql-sys_bdr.sql onde consta uma tabela users que tem os registros do usuarios para ser listados.
+- Operações do API Index, View, Add, Edit e Delete
+- Desenvolvido em CakePHP 3.5
 
 ### Requisitos
-* HTTP Server. Por exemplo: Apache. Mod_rewrite ativado.
-* PHP 5.3 ou superior.
+* HTTP Server. Por exemplo: Apache. De preferência com mod_rewrite ativo, mas não é obrigatório.
+* PHP 5.6.0 ou superior.
+* extensão mbstring
+* extensão intl
 * MySQL
 
 ### Instalação
+* Criar banco de dados mysql e adicionar a tabela tarefas:
+* Criar um banco de dados e adicionar a tabela com o comando:
+```
+CREATE TABLE `api_cake`  (
+  `id` int(0) NOT NULL AUTO_INCREMENT,
+  `titulo` varchar(255) NULL,
+  `descricao` text NULL,
+  `prioridade` int(11) NULL,
+  PRIMARY KEY (`id`)
+);
+```
 * Colocar a pasta "questao-4" no servidor
-* Importar o arquivo "questao-4/dbase/desafio_bdr.sql" no PhpMyAdmin ou diretamente no console mysql
-* Reconfigurar os dados de acesso a banco no arquivo "questao-4/app/Config/database.php" adequando "host", "username" e "password"
+* Reconfigurar os dados de acesso a banco no arquivo "questao-4/config/app.php" adequando "host", "username" e "password" apartir da linha 220;
+* Se precisar executar o comando para instalar os componentes do composer. 
+```
+composer install
+```
