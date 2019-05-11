@@ -4,13 +4,13 @@
 * Escreva um programa que imprima números de 1 a 100. Mas, para múltiplos de 3 imprima “Fizz” em vez do número e para múltiplos de 5 imprima “Buzz”. Para números múltiplos de ambos (3 e 5), imprima “FizzBuzz”.
 
 ### Solução: 
-* Foi utilizado o operador aritmético módulo (%) para calcular o resto da divisão (verificando se é múltiplo de 3 ou 5).
-* A função foi desenvolvida para poder adaptar o script futuramente (caso seja necessário imprimir de 2 a 200, por exemplo).
+* Foi utilizado o operador "for" como laço de repetição
+* (verificando se é múltiplo de 3 ou 5).
 
 ### Instalação
 * Não há a necessidade de nenhuma dependência.
 * Apenas coloque a pasta "questao-1" em um servidor apache funcional com PHP instalado e acesse o arquivo "index-1.php".
-* Siga as instruções na tela.
+* http://127.0.0.1/provaTecnica-BDR/questao-1/index.php
 
 ## Questão 2 - Pasta "questao-2"
 * Refatore o código abaixo, fazendo as alterações que julgar necessário.
@@ -26,12 +26,21 @@ if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true) {
 ```
 
 ### Solução: 
-* Foi mantida a diferença de caso das variavies "Loggedin" e "loggedin" para compatibilidade com a aplicação.
-* Verifico se há cookie ou sessão configurada com usuário logado
-* Parece ser proposital a diferença case_sensitive entre loggedin e Loggedin, por isso não refatorei, pois a aplicação pode estar armazenando das 2 maneiras
+```
+function redirect() {
+    header('Location: http://www.google.com');
+}
+
+$sLoggedin = (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true);
+$cLoggedin = (isset($_COOKIE['Loggedin']) && $_COOKIE['Loggedin'] == true);
+
+if ($sLoggedin || $cLoggedin) {
+    redirect();
+}
+```
 
 ### Instalação
-* O código é apenas parcial. O mesmo deve ser aberto em um editor de texto e avaliado.
+* Para executar a solução acesse http://SEU_DOMINIO/provaTecnica-BDR/questao-2/
 
 ## Questão 3 - Pasta "questao-3"
 * Refatore o código abaixo, fazendo as alterações que julgar necessário.
@@ -48,13 +57,11 @@ class MyUserClass {
 ```
 
 ### Solução: 
-* Nesse script getListaUsuario, tem a função de retornar uma lista de usuários em ordem alfabética.
-* No código passado no exercício, para o funcionamento do método é instanciado um objeto para conexão com o banco de dados toda vez que o método for chamado.
-* Com as alterações é possível utilizar o método sem a necessidade de criar um novo objeto. 
-* Além de permitir utilizar o mesmo método em diferentes conexões com o banco de dados.
+* Nessa class MyUserClass, foi alterada conforme a analise do arquivo, onde foi criada algumas CONSTANTS para conexão com o banco de dados.
+* Onde foi usado o objeto PDO da versão do php5.6 para conexao com o banco.
 
 ### Instalação
-* O código é apenas parcial. O mesmo deve ser aberto em um editor de texto e avaliado.
+* Fazer a importação do arquivo sql-sys_bdr.sql onde consta uma tabela users que tem os registros do usuarios para ser listados.
 
 ## Questão 4 - Pasta "questao-4"
 * Desenvolva uma API Rest para um sistema gerenciador de tarefas (inclusão/alteração/exclusão). As tarefas consistem em título e descrição, ordenadas por prioridade.

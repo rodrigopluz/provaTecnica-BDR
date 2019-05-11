@@ -3,7 +3,7 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Teste de Conhecimentos – Analista Desenvolvedor</title>
+        <title>Teste de Conhecimentos</title>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
         <link rel="stylesheet" href="css/style.css">
@@ -12,7 +12,7 @@
         <nav class="navbar navbar-inverse navbar-fixed-top">
             <div class="container">
                 <div class="navbar-header">
-                    <a class="navbar-brand" href="">Teste de Conhecimentos – Analista Desenvolvedor – BDR</a>
+                    <a class="navbar-brand" href="">Teste de Conhecimentos – BDR</a>
                 </div>
             </div>
         </nav>
@@ -27,23 +27,27 @@
             </div>
         </div>
         <div class="container buzz">
-            <?php
-                /*
-                 * Foi utilizado o operador aritmético módulo (%) para calcular o resto da divisão 
-                 * (verificando se é múltiplo de 3 ou 5).
-                 * A função foi desenvolvida para poder adaptar o script futuramente 
-                 * (caso seja necessário imprimir de 2 a 200, por exemplo).
-                 */
-                $bdr = filter_input(INPUT_POST, 'bdr');
-                if (!empty($bdr) && isset($bdr)) {
-                	function AnDv($x, $y){
-    					for($x; $x<=$y; $x++) 
-    						echo ($x % 3 ? ($x % 5 ? $x : "Buzz") : ($x % 5 ? "Fizz" : "FizzBuzz")) . "<br/>";
-    				}
-    				AnDv(1,100);
-                }
-            ?>
+            <ul>
+                <?php
+                    /*
+                    * Foi utilizado o operador "for" como laço de repetição
+                    * (verificando se é múltiplo de 3 ou 5).
+                    */
+                    for ($i = 1; $i <= 100; $i++) {
+                        if ($i % 15 == 0) {
+                            echo '<li>FizzBuzz</li>';
+                        } elseif ($i % 3 == 0) {
+                            echo '<li>Fizz</li>';
+                        } elseif ($i % 5 == 0) {
+                            echo '<li>Buzz</li>';
+                        } else {
+                            echo $i . '<br>';
+                        }
+                    }
+                ?>
+            </ul>
         </div>
+        <div class="clearfix"><br/></div>
         <footer class="footer">
             <div class="container">
                 <p class="text-muted">
