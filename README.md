@@ -40,7 +40,7 @@ if ($sLoggedin || $cLoggedin) {
 ```
 
 ### Instalação
-* Para executar a solução acesse http://localhost/provaTecnica-BDR/questao-2/
+* Para executar a solução acesse http://127.0.0.1/provaTecnica-BDR/questao-2/
 
 ## Questão 3 - Pasta "questao-3"
 * Refatore o código abaixo, fazendo as alterações que julgar necessário.
@@ -110,7 +110,7 @@ CREATE TABLE `api_cake`  (
 );
 ```
 * Colocar a pasta "questao-4" no servidor
-* Reconfigurar os dados de acesso a banco no arquivo "questao-4/config/app.php" adequando "host", "username" e "password" apartir da linha 220;
+* Reconfigurar os dados de acesso a banco no arquivo "http://127.0.0.1/provaTecnica-BDR/questao-4/config/app.php" adequando "host", "username" e "password" apartir da linha 220;
 * Se precisar executar o comando para instalar os componentes do composer. 
 ```
 composer install
