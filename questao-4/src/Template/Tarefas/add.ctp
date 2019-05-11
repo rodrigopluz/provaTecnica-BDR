@@ -7,13 +7,13 @@
 <nav class="large-3 medium-4 columns" id="actions-sidebar">
     <ul class="side-nav">
         <li class="heading"><?= __('Ação') ?></li>
-        <li><?= $this->Html->link(__('Listar Tarefas'), ['action' => 'index']) ?></li>
+        <li><?= $this->Html->link(__('Listar'), ['action' => 'index']) ?></li>
     </ul>
 </nav>
 <div class="tarefas form large-9 medium-8 columns content">
-    <?= $this->Form->create("Nova tarefa") ?>
+    <?= $this->Form->create("Novo cadastro") ?>
     <fieldset>
-        <legend><?= __('Adicionar Tarefa') ?></legend>
+        <legend><?= __('Adicionar') ?></legend>
         <?php
             echo $this->Form->control('titulo',['label' => 'Nome']);
             echo $this->Form->control('descricao', ['type' => 'textarea', 'label' => 'Descrição']);

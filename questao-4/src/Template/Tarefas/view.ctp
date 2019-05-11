@@ -7,10 +7,10 @@
 <nav class="large-3 medium-4 columns" id="actions-sidebar">
     <ul class="side-nav">
         <li class="heading"><?= __('Ações') ?></li>
-        <li><?= $this->Html->link(__('Editar Tarefa'), ['action' => 'edit', $tarefa->id]) ?> </li>
-        <li><?= $this->Form->postLink(__('Deletar Tarefa'), ['action' => 'delete', $tarefa->id], ['confirm' => __('Are you sure you want to delete # {0}?', $tarefa->id)]) ?> </li>
-        <li><?= $this->Html->link(__('Listar Tarefas'), ['action' => 'index']) ?> </li>
-        <li><?= $this->Html->link(__('Nova Tarefa'), ['action' => 'add']) ?> </li>
+        <li><?= $this->Html->link(__('Editar'), ['action' => 'edit', $tarefa->id]) ?> </li>
+        <li><?= $this->Form->postLink(__('Deletar'), ['action' => 'delete', $tarefa->id], ['confirm' => __('Are you sure you want to delete # {0}?', $tarefa->id)]) ?> </li>
+        <li><?= $this->Html->link(__('Listar'), ['action' => 'index']) ?> </li>
+        <li><?= $this->Html->link(__('Novo'), ['action' => 'add']) ?> </li>
     </ul>
 </nav>
 <div class="tarefas view large-9 medium-8 columns content">

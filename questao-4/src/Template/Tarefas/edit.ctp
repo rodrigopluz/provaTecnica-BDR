@@ -13,13 +13,13 @@
                 ['confirm' => __('Tem certeza que deseja exlucir o registro # {0}?', $tarefa->id)]
             )
         ?></li>
-        <li><?= $this->Html->link(__('Listar Tarefas'), ['action' => 'index']) ?></li>
+        <li><?= $this->Html->link(__('Listar'), ['action' => 'index']) ?></li>
     </ul>
 </nav>
 <div class="tarefas form large-9 medium-8 columns content">
     <?= $this->Form->create($tarefa) ?>
     <fieldset>
-        <legend><?= __('Editar Tarefa') ?></legend>
+        <legend><?= __('Editar') ?></legend>
         <?php
             echo $this->Form->control('titulo',['label'=>'Nome']);
             echo $this->Form->control('descricao',['type' => 'textarea', 'label'=>'Descrição']);
