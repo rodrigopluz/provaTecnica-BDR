@@ -40,7 +40,7 @@ if ($sLoggedin || $cLoggedin) {
 ```
 
 ### Instalação
-* Para executar a solução acesse http://SEU_DOMINIO/provaTecnica-BDR/questao-2/
+* Para executar a solução acesse http://localhost/provaTecnica-BDR/questao-2/
 
 ## Questão 3 - Pasta "questao-3"
 * Refatore o código abaixo, fazendo as alterações que julgar necessário.
@@ -62,6 +62,16 @@ class MyUserClass {
 
 ### Instalação
 * Fazer a importação do arquivo sql-sys_bdr.sql onde consta uma tabela users que tem os registros do usuarios para ser listados.
+* Ou poder ser criado um banco de dados adicionando comando a seguir:
+```
+CREATE TABLE `users` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `user_fullname` varchar(25) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=latin1 CHECKSUM=1 DELAY_KEY_WRITE=1 ROW_FORMAT=DYNAMIC;
+
+INSERT INTO `users`(`id`,`user_fullname`) VALUES (1,'Prime'),(6,'Summas Than');
+```
 
 ## Questão 4 - Pasta "questao-4"
 * Desenvolva uma API Rest para um sistema gerenciador de tarefas (inclusão/alteração/exclusão). As tarefas consistem em título e descrição, ordenadas por prioridade.
